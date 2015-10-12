@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h3 class="alert alert-danger">好站連結</h3>
+        <table class="table table-bordered">
+            <tr  class="success">
+                <td>網站名稱</td>
+                <td>網站簡介</td>
+                <td>新增日期</td>
+                <td>網站分類</td>
+            </tr>
+            <tr>
+                <td><a href="http://dict.mini.moe.edu.tw/cgi-bin/gdic/gsweb.cgi?o=ddictionary" target="_blank" data-toggle="tooltip" data-placement="right" title="點我">教育部國語小辭典</a></td>
+                <td>遇到不認得的字可以到這裡查。</td>
+                <td></td>
+                <td>國語</td>
+            </tr>
+        </table>
+    </body>
+    <script>
+       $( document ).ready(function() {
+        // initialize tooltip
+        $('[data-toggle="tooltip"]').tooltip()
+
+    });
+    </script>
+</html>

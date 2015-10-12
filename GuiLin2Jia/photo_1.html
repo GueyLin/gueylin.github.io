@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    
+    <body>
+        <h3 class="alert alert-warning">作品照片</h3>
+
+        <div class="container" id="photo">
+            <ul class="row" id="photoList">
+
+            </ul>
+        </div>
+
+
+    </body>
+</html>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<style>
+    #photo ul {
+        padding:0 0 0 0;
+        margin:0 0 0 0;
+    }
+    #photo ul li {
+        list-style:none;
+        margin-bottom:25px;
+    }
+    #photo ul li img {
+        cursor: pointer;
+    }
+</style>
+<script>
+    $( document ).ready(function() {
+
+        generatePhoto();
+    });
+
+    function generatePhoto() {
+        var photoSource = new Array('photo/stitch_00.gif',
+                                    'photo/stitch_01.gif',
+                                    'photo/stitch_02.gif',
+                                    'photo/stitch_03.gif',
+                                    'photo/stitch_04.gif',
+                                    'photo/stitch_05.gif');
+
+        var content="";
+        for(var key in photoSource){ 
+            content = "陣列索引："+ key+" ; 值： "+photoSource[key]; 
+            //console.log(content);
+
+            var template = '<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="' + photoSource[key] + '"></li>';
+            $('#photoList').append(template);
+        }
+    }
+
+    $('#photo li img').on('click',function(){
+        var src = $(this).attr('src');
+        var img = '<img src="' + src + '" class="img-responsive"/>';
+        $('#myModal').modal();
+        $('#myModal').on('shown.bs.modal', function(){
+            $('#myModal .modal-body').html(img);
+        });
+        $('#myModal').on('hidden.bs.modal', function(){
+            $('#myModal .modal-body').html('');
+        });
+    });
+</script>

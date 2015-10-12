@@ -1,0 +1,49 @@
+<!-- 壽頁資訊 -->
+<!DOCTYPE html>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+    <li role="home" class="active"><a href="#announcement" aria-controls="announcement" role="tab" data-toggle="tab">最新公告</a></li>
+
+    <li role="home"><a href="#update" aria-controls="update" role="tab" data-toggle="tab">更新紀錄</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="announcement">
+        <div class="row">
+            <div id="calendar" class="col-md-6"></div>
+            <div id="timetable" class="col-md-6"></div>
+        </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade" id="update">
+        
+        <div>
+            <table class="table table-bordered">
+                <tr  class="danger">
+                    <td>日期</td>
+                    <td>更新內容</td>
+                    <td>備註</td>
+                </tr>
+                <tr>
+                    <td>2015/10/12</td>
+                    <td>網站初版ProtoType</td>
+                    <td>已上傳至GitHub</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $( document ).ready(function() {
+        $.get("calendar.html",function(data){ //初始將home.html include div#main
+            $("#calendar").html(data);
+        })
+        $.get("timetable.html",function(data){ //初始將home.html include div#main
+            $("#timetable").html(data);
+        })
+
+    });
+</script>
+</html>
