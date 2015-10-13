@@ -39,8 +39,7 @@
 </style>
 <script>
     $( document ).ready(function() {
-
-        generatePhoto();
+        //generatePhoto();
     });
 
     function generatePhoto() {
@@ -56,7 +55,7 @@
             content = "陣列索引："+ key+" ; 值： "+photoSource[key]; 
             //console.log(content);
 
-            var template = '<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="' + photoSource[key] + '"></li>';
+            var template = '<li class="col-lg-3 col-md-4 col-sm-4 col-xs-6"><img src="' + photoSource[key] + '" width="100%"></li>';
             $('#photoList').append(template);
         }
     }

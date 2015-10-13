@@ -39,24 +39,25 @@
 </style>
 <script>
     $( document ).ready(function() {
-
         generatePhoto();
     });
 
     function generatePhoto() {
-        var photoSource = new Array('photo/stitch_00.gif',
-                                    'photo/stitch_01.gif',
-                                    'photo/stitch_02.gif',
-                                    'photo/stitch_03.gif',
-                                    'photo/stitch_04.gif',
-                                    'photo/stitch_05.gif');
+        var photoSource = new Array('photo/activity/1041007taro/1007taro01.JPG',
+                                    'photo/activity/1041007taro/1007taro02.JPG',
+                                    'photo/activity/1041007taro/1007taro03.JPG',
+                                    'photo/activity/1041007taro/1007taro04.JPG',
+                                    'photo/activity/1041007taro/1007taro05.JPG',
+                                    'photo/activity/1041007taro/1007taro06.JPG',
+                                    'photo/activity/1041007taro/1007taro07.JPG',
+                                    'photo/activity/1041007taro/1007taro08.JPG');
 
         var content="";
         for(var key in photoSource){ 
             content = "陣列索引："+ key+" ; 值： "+photoSource[key]; 
             //console.log(content);
 
-            var template = '<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="' + photoSource[key] + '"></li>';
+            var template = '<li class="col-lg-3 col-md-4 col-sm-4 col-xs-6"><img src="' + photoSource[key] + '" width="100%"></li>';
             $('#photoList').append(template);
         }
     }
