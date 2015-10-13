@@ -6,10 +6,16 @@
     <body>
         <h3 class="alert alert-success">閱讀作品照片</h3>
 
-        <div class="container" id="photo">
-            <ul class="row" id="photoList">
+        <div id="photo">
+            <div class="container">
+                <!-- Albums-->
+                <!-- 
+                <h5 class="alert alert-success">10/07 挖芋頭體驗</h5>
+                <ul class="row" id="1041007taro">
 
-            </ul>
+                </ul>
+                -->
+            </div>
         </div>
 
 
@@ -39,24 +45,33 @@
 </style>
 <script>
     $( document ).ready(function() {
-        //generatePhoto();
+        // 在此加入照片位置
+        var photo1041007taro = new Array('photo/activity/1041007taro/1007taro01.JPG',
+                                      'photo/activity/1041007taro/1007taro02.JPG',
+                                      'photo/activity/1041007taro/1007taro03.JPG',
+                                      'photo/activity/1041007taro/1007taro04.JPG',
+                                      'photo/activity/1041007taro/1007taro05.JPG',
+                                      'photo/activity/1041007taro/1007taro06.JPG',
+                                      'photo/activity/1041007taro/1007taro07.JPG',
+                                      'photo/activity/1041007taro/1007taro08.JPG');
+        
+
+
+        // 呼叫函式將照片放入頁面
+        //generatePhoto(photo1041007taro,"1041007taro");
+        
+
+
     });
 
-    function generatePhoto() {
-        var photoSource = new Array('photo/stitch_00.gif',
-                                    'photo/stitch_01.gif',
-                                    'photo/stitch_02.gif',
-                                    'photo/stitch_03.gif',
-                                    'photo/stitch_04.gif',
-                                    'photo/stitch_05.gif');
-
+    function generatePhoto(photoSource,id) {
         var content="";
         for(var key in photoSource){ 
             content = "陣列索引："+ key+" ; 值： "+photoSource[key]; 
             //console.log(content);
 
             var template = '<li class="col-lg-3 col-md-4 col-sm-4 col-xs-6"><img src="' + photoSource[key] + '" width="100%"></li>';
-            $('#photoList').append(template);
+            $('#'+id).append(template);
         }
     }
 

@@ -3,16 +3,25 @@
     <head>
         <meta charset="UTF-8">
     </head>
-    
+
     <body>
         <h3 class="alert alert-warning">作品照片</h3>
 
-        <div class="container" id="photo">
-            <ul class="row" id="photoList">
+        <div id="photo">
+            <div class="container">
+                <!-- Albums-->
+                <h5 class="alert alert-success">09/03 特色課程-小書製作</h5>
+                <ul class="row" id="1040903smallbook">
 
-            </ul>
+                </ul>
+
+                <h5 class="alert alert-success">09/23 參觀暑假作業展</h5>
+                <ul class="row" id="1040923summerhomework">
+
+                </ul>
+
+            </div>
         </div>
-
 
     </body>
 </html>
@@ -40,24 +49,28 @@
 </style>
 <script>
     $( document ).ready(function() {
-        //generatePhoto();
+        // 在此加入照片位置
+        var photo1040903smallbook = new Array('photo/product/1040903smallbook/1040903smallbook01.JPG');
+
+        var photo1040923summerhomework = new Array('photo/product/1040923summerhomework/1040923summerhomework01.JPG', 'photo/product/1040923summerhomework/1040923summerhomework02.JPG', 'photo/product/1040923summerhomework/1040923summerhomework03.JPG', 'photo/product/1040923summerhomework/1040923summerhomework04.JPG', 'photo/product/1040923summerhomework/1040923summerhomework05.JPG', 'photo/product/1040923summerhomework/1040923summerhomework06.JPG', 'photo/product/1040923summerhomework/1040923summerhomework07.JPG', 'photo/product/1040923summerhomework/1040923summerhomework08.JPG', 'photo/product/1040923summerhomework/1040923summerhomework09.JPG', 'photo/product/1040923summerhomework/1040923summerhomework10.JPG', 'photo/product/1040923summerhomework/1040923summerhomework11.JPG',                                                   'photo/product/1040923summerhomework/1040923summerhomework12.JPG');
+
+
+
+        // 呼叫函式將照片放入頁面
+        generatePhoto(photo1040903smallbook,"1040903smallbook");
+        generatePhoto(photo1040923summerhomework,"1040923summerhomework");
+
+
     });
 
-    function generatePhoto() {
-        var photoSource = new Array('photo/stitch_00.gif',
-                                    'photo/stitch_01.gif',
-                                    'photo/stitch_02.gif',
-                                    'photo/stitch_03.gif',
-                                    'photo/stitch_04.gif',
-                                    'photo/stitch_05.gif');
-
+    function generatePhoto(photoSource,id) {
         var content="";
         for(var key in photoSource){ 
             content = "陣列索引："+ key+" ; 值： "+photoSource[key]; 
             //console.log(content);
 
             var template = '<li class="col-lg-3 col-md-4 col-sm-4 col-xs-6"><img src="' + photoSource[key] + '" width="100%"></li>';
-            $('#photoList').append(template);
+            $('#'+id).append(template);
         }
     }
 
