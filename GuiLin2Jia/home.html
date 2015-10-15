@@ -12,13 +12,37 @@
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="announcement">
         <div class="row">
-            <div id="calendar" class="col-md-6"></div>
-            <div id="timetable" class="col-md-6"></div>
+            <div id="calendar" class="col-xs-4 col-sm-4 col-md-4"></div>
+            <div id="timetable" class="col-xs-4 col-sm-4 col-md-4"></div>
+            <div id="news" class="col-xs-4 col-sm-4 col-md-4">
+                <div id="slideshow">
+                    <style>
+                        .newsPhoto {
+                        width:100%;
+                        }
+                    </style>
+                    <div>
+                        <img class="newsPhoto" src="photo/activity/1040904safe/1040904safe01.jpg">
+                    </div>
+                    <div>
+                        <img class="newsPhoto" src="photo/activity/1040925running/1040925running05.JPG">
+                    </div>
+                    <div>
+                        <img class="newsPhoto" src="photo/activity/1041007taro/1007taro05.JPG">
+                    </div>
+                    <div>
+                        <img class="newsPhoto" src="photo/product/1040903smallbook/1040903smallbook01.JPG">
+                    </div>
+                    <div>
+                        <img class="newsPhoto" src="photo/product/1040923summerhomework/1040923summerhomework04.JPG">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div role="tabpanel" class="tab-pane fade" id="update">
-        
+
         <div>
             <table class="table table-bordered">
                 <tr  class="danger">
@@ -31,10 +55,38 @@
                     <td>網站初版ProtoType</td>
                     <td>已上傳至GitHub</td>
                 </tr>
+                <tr>
+                    <td>2015/10/13</td>
+                    <td>加入各相簿照片，點照片可看大圖</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015/10/15</td>
+                    <td>加入教師與學生介紹裝飾</td>
+                    <td></td>
+                </tr>
             </table>
         </div>
     </div>
 </div>
+<style>
+    #slideshow { 
+        margin: 10px auto; 
+        position: relative; 
+        width: 300px; 
+        height: 300px;
+        padding: 10px; 
+        box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+    }
+
+    #slideshow > div { 
+        position: absolute; 
+        top: 10px; 
+        left: 10px; 
+        right: 10px; 
+        bottom: 10px; 
+    }
+</style>
 <script>
     $( document ).ready(function() {
         $.get("calendar.html",function(data){ //初始將home.html include div#main
@@ -43,6 +95,17 @@
         $.get("timetable.html",function(data){ //初始將home.html include div#main
             $("#timetable").html(data);
         })
+
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function() { 
+            $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+        },  3000);
 
     });
 </script>
