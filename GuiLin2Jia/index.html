@@ -128,74 +128,73 @@
             <!-- Begin footer -->
 
             <footer class="navbar navbar-inverse navbar-fixed-bottom">
-                <div class="row" style="padding:5px">
-                    <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-2 col-xs-11 col-xs-offset-1" >
-                        <img src="images/QRCode.png" width="50px" style="margin:0px 45px 0px 15px;"></img>
-                    <div type="text" class="btn btn-default">桂</div>
-                    <div type="text" class="btn btn-danger">林</div>
-                    <div type="text" class="btn btn-success">二</div>
-                    <div type="text" class="btn btn-info">甲</div>
-                    <div type="text" class="btn btn-default">園</div>
-                    <div type="text" class="btn btn-warning">地</div>
-                </div>
-                <div class="col-md-4 col-sm-3 col-sm-offset-4" style="margin:10px 0px 10px 0px;">
-                    <div class="text-muted text-center"><h5>&#169; 2015 Guey Lin, Billy Shih All Rights Reserved</h5></div>
-                </div>
+                <div class="row" style="margin-left:10px;">
+                    <div class="col-xs-8 col-sm-8 col-md-8" >
+                        <div type="text" class="btn btn-default">桂</div>
+                        <div type="text" class="btn btn-danger">林</div>
+                        <div type="text" class="btn btn-success">二</div>
+                        <div type="text" class="btn btn-info">甲</div>
+                        <div type="text" class="btn btn-default">園</div>
+                        <div type="text" class="btn btn-warning">地</div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4" style="margin:10px 0px 10px 0px;">
+                        <div class="text-muted text-center"><h5>&#169; 2015 Guey Lin, Billy Shih All Rights Reserved</h5></div>
+                    </div>
                 </div>
             </footer>
 
 
-        <!-- Hidden page List-->
-        <ul class="list-side hidden">
-            <li><a target="home.html" >home</a></li>
-            <li><a target="teacher.html" >teacher</a></li>
-            <li><a target="student.htmlte" >student</a></li>
-            <li><a target="photo_0.html" >photo_0</a></li>
-            <li><a target="photo_1.html" >photo_1</a></li>
-            <li><a target="photo_2.html" >photo_2</a></li>
-            <li><a target="refrence.html" >refrence</a></li>
-        </ul>
+            <!-- Hidden page List-->
+            <ul class="list-side hidden">
+                <li><a target="home.html" >home</a></li>
+                <li><a target="teacher.html" >teacher</a></li>
+                <li><a target="student.htmlte" >student</a></li>
+                <li><a target="photo_0.html" >photo_0</a></li>
+                <li><a target="photo_1.html" >photo_1</a></li>
+                <li><a target="photo_2.html" >photo_2</a></li>
+                <li><a target="refrence.html" >refrence</a></li>
+            </ul>
         </div>
     </body>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="scripts/jquery-1.11.3.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
-<script>
-    $( document ).ready(function() {
-        $.get("home.html",function(data){ //初始將home.html include div#main
-            $("#main").html(data);
-        })
+    <script>
+        $( document ).ready(function() {
+            $.get("home.html",function(data){ //初始將home.html include div#main
+                $("#main").html(data);
+            })
 
-        // initialize tooltip
-        $('[data-toggle="tooltip"]').tooltip()
+            // initialize tooltip
+            $('[data-toggle="tooltip"]').tooltip()
 
-    });
+        });
 
-    $('#navbar ul li a').on('click',function(){
-        if($(this).hasClass('dropdown-toggle')){
-            return;
+        $('#navbar ul li a').on('click',function(){
+            if($(this).hasClass('dropdown-toggle')){
+                return;
+            }
+
+            // 改變navbar的選取狀態
+            removeAllActiveLi();
+            $(this).parent().addClass('active');
+
+
+            // 取得目前點選的target
+            var $this = $(this);
+            var _clickTab = $this.attr('target');
+
+            $.get(_clickTab,function(data){
+                $("#main").html(data); 
+            });
+        });
+
+        function removeAllActiveLi(){
+            $('#navbar ul li').removeClass('active');
         }
 
-        // 改變navbar的選取狀態
-        removeAllActiveLi();
-        $(this).parent().addClass('active');
-
-
-        // 取得目前點選的target
-        var $this = $(this);
-        var _clickTab = $this.attr('target');
-
-        $.get(_clickTab,function(data){
-            $("#main").html(data); 
-        });
-    });
-
-    function removeAllActiveLi(){
-        $('#navbar ul li').removeClass('active');
-    }
-
-</script>
+    </script>
 </html>

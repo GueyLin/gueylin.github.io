@@ -2,43 +2,67 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <style>
+            .teacher{
+                font-weight: 400;
+                color:aliceblue;
+                margin:5px 10px 0px 10px;
+                height: 90px;
+                width: 90%
+                    font-family: DFKai-sb;
+            }
+
+            .pink{
+                background-color: deeppink;
+            }
+
+            .green{
+                background-color:forestgreen;
+            }
+
+            .blue {
+                background-color:dodgerblue;
+            }
+        </style>
     </head>
     <body>
         <h3 class="alert alert-danger">教師介紹</h3>
 
-        <div>
-            <table class="table table-striped" >
-                <tr  class="info">
-                    <th width=100 ></th>
-                    <th width=150 >名稱</th>
-                    <th>簡介</th>
-                </tr>
-                <tr>
-                    <td>級任老師</td>
-                    <td>心怡老師</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>閩南語</td>
-                    <td>淑貞老師</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>英語</td>
-                    <td>雁琳老師</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>音樂</td>
-                    <td>雪卿老師</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>美勞</td>
-                    <td>維庭老師</td>
-                    <td></td>
-                </tr>
-            </table>
+        <div class="row">
+            <div class="col-xs-12 col-md-3 teacher pink">
+                <h3>級任老師<span style="float:right;width:50px;">
+                    <img src="images/teacher.png" width="100%">
+                    </span></h3>
+                <h4>心怡老師</h4>
+            </div>
+
+            <div class="col-xs-12 col-md-3 teacher green">
+                <h3>閩南語<span style="float:right;width:50px;">
+                    <img src="images/teacher.png" width="100%">
+                    </span></h3>
+                <h4>淑貞老師</h4>
+            </div>
+
+            <div class="col-xs-12 col-md-3 teacher blue">
+                <h3>英語<span style="float:right;width:50px;">
+                    <img src="images/teacher.png" width="100%">
+                    </span></h3>
+                <h4>雁琳老師</h4>
+            </div>
+
+            <div class="col-xs-12 col-md-3 teacher green">
+                <h3>音樂<span style="float:right;width:50px;">
+                    <img src="images/teacher.png" width="100%">
+                    </span></h3>
+                <h4>雪卿老師</h4>
+            </div>
+
+            <div class="col-xs-12 col-md-3 teacher blue">
+                <h3>美勞<span style="float:right;width:50px;">
+                    <img src="images/teacher.png" width="100%">
+                    </span></h3>
+                <h4>維庭老師</h4>
+            </div>
         </div>
 
     </body>
