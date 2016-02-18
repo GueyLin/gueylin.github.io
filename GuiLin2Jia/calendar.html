@@ -22,6 +22,11 @@
                 border-radius:20px;
                 background-color:yellow;"
             }
+            
+            .dayOff {
+                color:white;
+                background-color: red;
+            }
         </style>
         <table class="table table-bordered" id="calendarTable" style="width:100%;">
             <thead>
@@ -54,11 +59,17 @@
                     <td>二</td>
                     <td>14</td>
                     <td>15</td>
-                    <td>16</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="書法課程">16</a>
+                    </td>
                     <td>17</td>
-                    <td>18</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="直笛、小提琴課程">18</a>
+                    </td>
                     <td>19</td>
-                    <td>20</td>
+                    <td class="eventdate" style="background-color:yellow;">
+                        <a data-toggle="tooltip" data-placement="left" title="補課，燈籠彩繪活動">20</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>三</td>
@@ -73,8 +84,8 @@
                 <tr>
                     <td>四</td>
                     <td>28</td>
-                    <td class="eventdate">
-                    <a data-toggle="tooltip" data-placement="left" title="和平紀念日彈性放假">29
+                    <td class="dayOff">
+                        <a data-toggle="tooltip" data-placement="left" title="和平紀念日彈性放假">29</a>
                     </td>
                     <td></td>
                     <td></td>
@@ -90,10 +101,16 @@
                     <td>四</td>
                     <td></td>
                     <td></td>
-                    <td>1</td>
-                    <td>2</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="校內模範生選拔">1</a>
+                        </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="新住民母語傳承課程開課">2</a>
+                    </td>
                     <td>3</td>
-                    <td>4</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="才藝小達人活動開始">4</a>
+                    </td>
                     <td>5</td>
                 </tr>
                 <tr>
@@ -101,18 +118,30 @@
                     <td>6</td>
                     <td>7</td>
                     <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="寒假作業展、中小學聯運">9</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="寒假作業展、中小學聯運">10</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="寒假作業展、中小學聯運">11</a>
+                    </td>
                     <td>12</td>
                 </tr>
                 <tr>
                     <td>六</td>
                     <td>13</td>
-                    <td>14</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="補救教學成長測驗">14</a>
+                    </td>
                     <td>15</td>
-                    <td>16</td>
-                    <td>17</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="作業檢核">16</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="口腔健檢">17</a>
+                    </td>
                     <td>18</td>
                     <td>19</td>
                 </tr>
@@ -130,9 +159,15 @@
                     <td>八</td>
                     <td>27</td>
                     <td>28</td>
-                    <td>29</td>
-                    <td>30</td>
-                    <td>31</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="第一次成績評量">29</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="第一次成績評量">30</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="模範爭表揚、打梅季">31</a>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -154,9 +189,11 @@
                 <tr>
                     <td>九</td>
                     <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
+                    <td class="dayOff">4</td>
+                    <td class="dayOff">5</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="作業檢核">6</a>
+                    </td>
                     <td>7</td>
                     <td>8</td>
                     <td>9</td>
@@ -168,7 +205,9 @@
                     <td>12</td>
                     <td>13</td>
                     <td>14</td>
-                    <td>15</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="台中故事人協會說故事">15</a>
+                    </td>
                     <td>16</td>
                 </tr>
                 <tr>
@@ -177,8 +216,12 @@
                     <td>18</td>
                     <td>19</td>
                     <td>20</td>
-                    <td>21</td>
-                    <td>22</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="校舍及遊樂器材安全檢查">21</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="防災學生藥物濫用宣講">22</a>
+                    </td>
                     <td>23</td>
                 </tr>
                 <tr>
@@ -186,9 +229,15 @@
                     <td>24</td>
                     <td>25</td>
                     <td>26</td>
-                    <td>27</td>
-                    <td>28</td>
-                    <td>29</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="新住民母語傳承課程結束">27</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="小提琴報名甄試結束">28</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="新生報到">29</a>
+                    </td>
                     <td>30</td>
                 </tr>
 
@@ -202,13 +251,17 @@
                     <td>3</td>
                     <td>4</td>
                     <td>5</td>
-                    <td>6</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="親職教育講座暨母親節感恩活動">6</a>
+                    </td>
                     <td>7</td>
                 </tr>
                 <tr>
                     <td>十四</td>
                     <td>8</td>
-                    <td>9</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="我是剪報高手徵稿">9</a>
+                    </td>
                     <td>10</td>
                     <td>11</td>
                     <td>12</td>
@@ -219,9 +272,15 @@
                     <td>十五</td>
                     <td>15</td>
                     <td>16</td>
-                    <td>17</td>
-                    <td>18</td>
-                    <td>19</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="作業檢核">17</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="第二次成績評量">18</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="第二次成績評量">19</a>
+                    </td>
                     <td>20</td>
                     <td>21</td>
                 </tr>
@@ -229,9 +288,13 @@
                     <td>十六</td>
                     <td>22</td>
                     <td>23</td>
-                    <td>24</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="畢業典禮籌備會議">24</a>
+                    </td>
                     <td>25</td>
-                    <td>26</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="小提琴甄選、台灣學生學習成就評量">26</a>
+                    </td>
                     <td>27</td>
                     <td>28</td>
                 </tr>
@@ -239,7 +302,9 @@
                     <td>十七</td>
                     <td>29</td>
                     <td>30</td>
-                    <td>31</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="作業檢核">31</a>
+                    </td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -265,8 +330,8 @@
                     <td>6</td>
                     <td>7</td>
                     <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
+                    <td class="dayOff">9</td>
+                    <td class="dayOff">10</td>
                     <td>11</td>
                 </tr>
                 <tr>
@@ -274,29 +339,49 @@
                     <td>12</td>
                     <td>13</td>
                     <td>14</td>
-                    <td>15</td>
-                    <td>16</td>
-                    <td>17</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="縣長獎頒獎典禮">15</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="直笛、小提琴、書法課程結束">16</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="兒盟繪畫課結束">17</a>
+                    </td>
                     <td>18</td>
                 </tr>
                 <tr>
                     <td>二十</td>
                     <td>19</td>
                     <td>20</td>
-                    <td>21</td>
-                    <td>22</td>
-                    <td>23</td>
-                    <td>24</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="畢業典禮">21</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="第三次成績評量">22</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="第三次成績評量，中高年級課後班結束">23</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="夜光天使班課程結束">24</a>
+                    </td>
                     <td>25</td>
                 </tr>
                 <tr>
                     <td>廿一</td>
                     <td>26</td>
                     <td>27</td>
-                    <td>28</td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="作業檢核">28</a>
+                    </td>
                     <td>29</td>
-                    <td>30</td>
-                    <td></td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="休業式">30</a>
+                    </td>
+                    <td class="eventdate">
+                        <a data-toggle="tooltip" data-placement="left" title="暑假開始">7/1</a>
+                    </td>
                     <td></td>
                 </tr>
             </tbody>
