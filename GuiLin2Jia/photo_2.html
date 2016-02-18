@@ -4,17 +4,31 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <h3 class="alert alert-success">閱讀作品照片</h3>
+        <h3 class="alert alert-success">特色課程照片</h3>
 
         <div id="photo">
             <div class="container">
                 <!-- Albums-->
-                <!-- 
-                <h5 class="alert alert-success">10/07 挖芋頭體驗</h5>
-                <ul class="row" id="1041007taro">
+                <h5 class="alert alert-success">10/15 種蘿蔔體驗</h5>
+                <ul class="row" id="1041015carrot">
 
                 </ul>
-                -->
+
+                <h5 class="alert alert-success">10/29 圖書週記</h5>
+                <ul class="row" id="1041029bookweekly">
+
+                </ul>
+
+                <h5 class="alert alert-success">11/26 圖書週記+六大類食物配對遊戲</h5>
+                <ul class="row" id="1041126bookweekly_sixfood">
+
+                </ul>
+
+                <h5 class="alert alert-success">12/15 白蘿蔔大豐收</h5>
+                <ul class="row" id="1041215harvestcarrot">
+
+                </ul>
+
             </div>
         </div>
 
@@ -32,7 +46,7 @@
 </div><!-- /.modal -->
 <style>
     #myModal .modal-dialog  {width:75%;}
-    
+
     #photo ul {
         padding:0 0 0 0;
         margin:0 0 0 0;
@@ -48,20 +62,92 @@
 <script>
     $( document ).ready(function() {
         // 在此加入照片位置
-        var photo1041007taro = new Array('photo/activity/1041007taro/1007taro01.JPG',
-                                      'photo/activity/1041007taro/1007taro02.JPG',
-                                      'photo/activity/1041007taro/1007taro03.JPG',
-                                      'photo/activity/1041007taro/1007taro04.JPG',
-                                      'photo/activity/1041007taro/1007taro05.JPG',
-                                      'photo/activity/1041007taro/1007taro06.JPG',
-                                      'photo/activity/1041007taro/1007taro07.JPG',
-                                      'photo/activity/1041007taro/1007taro08.JPG');
-        
+        var photo1041015carrot = new Array('photo/special/1041015carrot/1041015carrot (1).JPG',
+                                           'photo/special/1041015carrot/1041015carrot (2).JPG',
+                                           'photo/special/1041015carrot/1041015carrot (3).JPG',
+                                           'photo/special/1041015carrot/1041015carrot (4).JPG',
+                                           'photo/special/1041015carrot/1041015carrot (5).JPG',
+                                           'photo/special/1041015carrot/1041015carrot (6).JPG',
+                                           'photo/special/1041015carrot/1041015carrot (7).JPG',
+                                           'photo/special/1041015carrot/1041015carrot (8).JPG',
+                                           'photo/special/1041015carrot/1041015carrot (9).JPG',
+                                           'photo/special/1041015carrot/1041015carrot (10).JPG',
+                                           'photo/special/1041015carrot/1041015carrot (11).JPG',
+                                           'photo/special/1041015carrot/1041015carrot (12).JPG');
+
+        var photo1041029bookweekly = new Array('photo/special/1041029bookweekly/1041029bookweekly (1).JPG',
+                                               'photo/special/1041029bookweekly/1041029bookweekly (2).JPG',
+                                               'photo/special/1041029bookweekly/1041029bookweekly (3).JPG',
+                                               'photo/special/1041029bookweekly/1041029bookweekly (4).JPG',
+                                               'photo/special/1041029bookweekly/1041029bookweekly (5).JPG',
+                                               'photo/special/1041029bookweekly/1041029bookweekly (6).JPG',
+                                               'photo/special/1041029bookweekly/1041029bookweekly (7).JPG',
+                                               'photo/special/1041029bookweekly/1041029bookweekly (8).JPG',
+                                               'photo/special/1041029bookweekly/1041029bookweekly (9).JPG',
+                                               'photo/special/1041029bookweekly/1041029bookweekly (10).JPG',
+                                               'photo/special/1041029bookweekly/1041029bookweekly (11).JPG');
+
+        var photo1041126bookweekly_sixfood = new Array(
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (1).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (2).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (3).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (4).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (5).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (6).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (7).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (8).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (9).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (10).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (11).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (12).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (13).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (14).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (15).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (16).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (17).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (18).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (19).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (20).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (21).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (22).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (23).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (24).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (25).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (26).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (27).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (28).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (29).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (30).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (31).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (32).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (33).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (34).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (35).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (36).JPG',
+            'photo/special/1041126bookweekly_sixfood/1041126bookweekly_sixfood (37).JPG'
+        );
+
+
+        var photo1041215harvestcarrot = new Array(
+            'photo/special/1041215harvestcarrot/1041215harvestcarrot (1).JPG',
+            'photo/special/1041215harvestcarrot/1041215harvestcarrot (2).JPG',
+            'photo/special/1041215harvestcarrot/1041215harvestcarrot (3).JPG',
+            'photo/special/1041215harvestcarrot/1041215harvestcarrot (4).JPG',
+            'photo/special/1041215harvestcarrot/1041215harvestcarrot (5).JPG',
+            'photo/special/1041215harvestcarrot/1041215harvestcarrot (6).JPG',
+            'photo/special/1041215harvestcarrot/1041215harvestcarrot (7).JPG',
+            'photo/special/1041215harvestcarrot/1041215harvestcarrot (8).JPG'
+        );
+
 
 
         // 呼叫函式將照片放入頁面
-        //generatePhoto(photo1041007taro,"1041007taro");
-        
+
+        generatePhoto(photo1041015carrot,"1041015carrot");
+        generatePhoto(photo1041029bookweekly,"1041029bookweekly");
+        generatePhoto(photo1041126bookweekly_sixfood,"1041126bookweekly_sixfood");
+        generatePhoto(photo1041215harvestcarrot,"1041215harvestcarrot");
+
 
 
     });
